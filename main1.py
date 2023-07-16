@@ -1,21 +1,8 @@
 import requests
 import json
 from bs4 import BeautifulSoup
-
 import os
 import pandas as pd
-
-# scraper = cloudscraper.create_scraper()
-# url = 'https://www.indeed.com/q-odoo-remote-jobs.html?vjk=6a129b83abd8da73'
-# s = requests.session()
-# r = scraper(url)
-# res = s.get(url)
-# print(res.status_code)
-# sp = BeautifulSoup(r.text,'html.parser')
-# print(sp.title.text)
-
-
-
 
 
 def input_url():
@@ -100,8 +87,8 @@ def get_all_items(url):
 
     #create csv
     df = pd.DataFrame(jobs_list)
-    df.to_csv('indeed_data.csv', index=False)
-    df.to_csv('indeed_data.xlsx',index=False)
+    df.to_csv('jobstreet_data.csv', index=False)
+    df.to_csv('jobstreet_data.xlsx',index=False)
 
     #data created
     print('data created succes')
